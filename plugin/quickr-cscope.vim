@@ -170,7 +170,7 @@ nnoremap <silent> <plug>(quickr_cscope_assignments)     :call <SID>quickr_cscope
 nnoremap <silent> <plug>(quickr_cscope_symbols_input)   :call <SID>quickr_cscope("", "s", "", "cs")<CR>
 nnoremap <silent> <plug>(quickr_cscope_files_input)     :call <SID>quickr_cscope("", "f", "", "cs")<CR>
 nnoremap <silent> <plug>(quickr_cscope_text_input)      :call <SID>quickr_cscope("", "t", "", "cs")<CR>
-nnoremap <silent> <plug>(quickr_cscope_functions_input) :call <SID>quickr_cscope("", "d", "", "cs")<CR>
+nnoremap <silent> <plug>(quickr_cscope_global_input)    :call <SID>quickr_cscope("", "g", "", "cs")<CR>
 
 vnoremap <silent> <plug>(quickr_cscope_symbols)         :call <SID>quickr_cscope(<SID>get_visual_selection(), "s", "", "cs")<CR>
 vnoremap <silent> <plug>(quickr_cscope_callers)         :call <SID>quickr_cscope(<SID>get_visual_selection(), "c", "", "cs")<CR>
@@ -184,6 +184,7 @@ vnoremap <silent> <plug>(quickr_cscope_assignments)     :call <SID>quickr_cscope
 
 if g:quickr_cscope_keymaps
     nmap <leader>g <plug>(quickr_cscope_global)
+    nmap <leader>G <plug>(quickr_cscope_global_input)
     nmap <leader>s <plug>(quickr_cscope_symbols)
     nmap <leader>S <plug>(quickr_cscope_symbols_input)
     nmap <leader>c <plug>(quickr_cscope_callers)
@@ -195,7 +196,7 @@ if g:quickr_cscope_keymaps
     nmap <leader>d <plug>(quickr_cscope_functions)
     nmap <leader>D <plug>(quickr_cscope_functions_input)
     nmap <leader>e <plug>(quickr_cscope_egrep)
-    nmap <leader>e <plug>(quickr_cscope_assignments)
+    nmap <leader>a <plug>(quickr_cscope_assignments)
 
     vmap <leader>g <plug>(quickr_cscope_global)
     vmap <leader>s <plug>(quickr_cscope_symbols)
@@ -205,7 +206,7 @@ if g:quickr_cscope_keymaps
     vmap <leader>t <plug>(quickr_cscope_text)
     vmap <leader>d <plug>(quickr_cscope_functions)
     vmap <leader>e <plug>(quickr_cscope_egrep)
-    vmap <leader>e <plug>(quickr_cscope_assignments)
+    vmap <leader>a <plug>(quickr_cscope_assignments)
 endif
 
 " Use quickfix window for cscope results. Clear previous results before the search.
