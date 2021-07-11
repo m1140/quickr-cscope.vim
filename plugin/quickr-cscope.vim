@@ -62,7 +62,8 @@ function! s:autoload_db()
         return 1
     else
         call s:debug_echo('Database file not found.')
-        return 0
+        " do not fail here since database might be loaded by other plugin
+        return 1
     endif
 endfunction
 " }}
